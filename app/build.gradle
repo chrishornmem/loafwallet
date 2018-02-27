@@ -7,31 +7,31 @@ model {
 
         defaultConfig {
             testInstrumentationRunner = 'android.support.test.runner.AndroidJUnitRunner'
-            applicationId = 'com.loafwallet'
+            applicationId = 'com.onem.onemwallet'
             minSdkVersion.apiLevel = 23
             targetSdkVersion.apiLevel = 25
             versionCode = 0
-            versionName = "0.2"
+            versionName = "0.3"
         }
 
         productFlavors.with {
-            create("loaf") {
-                applicationId "com.loafwallet"
+            create("onem") {
+                applicationId "com.onem.onemwallet"
                 resValues.with {
                     create() {
                         type = "string"
                         name = "app_name"
-                        value = "LoafWallet"
+                        value = "ONEmWallet"
                     }
                 }
             }
             create("demo") {
-                applicationId "com.loafdemo"
+                applicationId "com.onem.onemdemo"
                 resValues.with {
                     create() {
                         type = "string"
                         name = "app_name"
-                        value = "LoafWallet-demo"
+                        value = "ONEmWallet-demo"
                     }
                 }
             }
@@ -152,4 +152,3 @@ dependencies {
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
 }
 apply plugin: 'com.google.gms.google-services'
-
